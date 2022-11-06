@@ -1,16 +1,17 @@
-anagram<T>(String word){
+anagram<T>(String word, String word2){
   word = word.toUpperCase();
-  if(word.substring(0, 1) != word.substring(word.length - 1, 1)){
+  word2 = word2.toUpperCase();
+  if(word.substring(0, 1) != word2.substring(word.length - 1, 1)){
     return false;
   }
-  if(word.length < 3){
+  if(word.length < 2){
     return true;
   }
   word = word.substring(1, 1);
-  word = word.substring(word.length - 1, 1);
-  return anagram(word); 
+  word2 = word.substring(word2.length - 1, 1);
+  return anagram(word, word2); 
 }
 void main() {
-  print(anagram("Moom"));
+  print(anagram("Friends", "sdneirF"));
 }
 
