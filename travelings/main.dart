@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'TravelTicket.dart';
+import 'MyForm.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,15 +20,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('travelings'),
         ),
-        body: 
-        Center(
-          child: Container(
-            width: 250,
-            child: ListView.builder(
-              itemCount: 3,
-              itemBuilder: ((context, index) => TravelTicket())),
-          ),
-        )  
+        body: const MainAppForm(islands: ['Hawaii', 'Maldives']),         
       )
     );
   }
